@@ -1,0 +1,7 @@
+parameters:
+    level: 5
+    paths:
+        - src
+    treatPhpDocTypesAsCertain: false
+    ignoreErrors:
+        - '#Trait RabbitEvents\\Bundle\\Publisher\\PublishableEventTesting is used zero times#'

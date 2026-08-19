@@ -1,0 +1,67 @@
+{
+  "name": "rabbitevents/symfony-bundle",
+  "description": "RabbitEvents for Symfony — publish and listen to events across microservices via RabbitMQ",
+  "keywords": [
+    "symfony",
+    "rabbitmq",
+    "events",
+    "microservices",
+    "messaging",
+    "amqp",
+    "pubsub",
+    "broadcast",
+    "protobuf",
+    "event-driven",
+    "queue",
+    "publish",
+    "subscribe"
+  ],
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Eugene Kirdzei",
+      "email": "masterjus@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "ext-json": "*",
+    "enqueue/amqp-lib": "^0.10",
+    "psr/log": "^3.0",
+    "symfony/config": "^7.0|^8.0",
+    "symfony/console": "^7.0|^8.0",
+    "symfony/dependency-injection": "^7.0|^8.0",
+    "symfony/event-dispatcher": "^7.0|^8.0",
+    "symfony/framework-bundle": "^7.0|^8.0"
+  },
+  "require-dev": {
+    "google/protobuf": "^4.33",
+    "mockery/mockery": "^1.6.0",
+    "phpstan/phpstan": "^2.1",
+    "phpunit/phpunit": "^10.5|^11.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "RabbitEvents\\Bundle\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "RabbitEvents\\Bundle\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit -c phpunit.xml.dist",
+    "analyse": "vendor/bin/phpstan --memory-limit=256M analyse"
+  },
+  "suggest": {
+    "ext-pcntl": "Required to use all features of the worker.",
+    "ext-amqp": "Using this extension makes your app faster. If you're using it you need to install enqueue/amqp-ext.",
+    "enqueue/amqp-ext": "This package is necessary if you want to use `ext-amqp`.",
+    "google/protobuf": "Required for Protobuf serialization support (auto-registered when installed)."
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
