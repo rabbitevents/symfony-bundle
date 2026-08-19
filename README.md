@@ -2,18 +2,18 @@
 
 [![Build Status](https://github.com/rabbitevents/symfony-bundle/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/rabbitevents/symfony-bundle/actions)
 [![Latest Stable Version](https://poser.pugx.org/rabbitevents/symfony-bundle/v/stable)](https://packagist.org/packages/rabbitevents/symfony-bundle)
-[![Total Downloads](https://poser.pugx.org/rabbitevents/symfony-bundle/downloads)](https://packagist.org/packages/rabbitevents/symfony-bundle)
-[![License](https://poser.pugx.org/rabbitevents/symfony-bundle/license)](https://packagist.org/packages/rabbitevents/symfony-bundle)
+[![Total Downloads](https://img.shields.io/packagist/dt/rabbitevents/symfony-bundle)](https://packagist.org/packages/rabbitevents/symfony-bundle)
+[![Latest Version](https://img.shields.io/packagist/v/rabbitevents/symfony-bundle)](https://packagist.org/packages/rabbitevents/symfony-bundle)
+[![License](https://img.shields.io/packagist/l/rabbitevents/symfony-bundle)](https://packagist.org/packages/rabbitevents/symfony-bundle)
 
 **Publish and listen to events across microservices via RabbitMQ — for Symfony.**
 
-This bundle provides inter-application event communication using RabbitMQ topic exchanges. Events published by any microservice (written in Symfony, Laravel using [`nuwber/rabbitevents`](https://github.com/nuwber/rabbitevents), or any other language) are routed across services based on routing keys, with full support for wildcard routing.
+This bundle provides inter-application event communication using RabbitMQ topic exchanges. Events published by any microservice are routed across services based on routing keys, with full support for wildcard routing.
 
 ---
 
 ## Features
 
-- 🚀 **Seamless Interoperability:** Compatible with Laravel [`nuwber/rabbitevents`](https://github.com/nuwber/rabbitevents).
 - 🏷️ **Modern PHP 8+ Attributes:** Register listeners via `#[AsRabbitListener]`, on whole classes or individual methods.
 - ⚡ **Zero-Overhead Publisher:** Lazy connection initialization — RabbitMQ connections are only established when messages are published.
 - 🔄 **Wildcard Routing:** Full AMQP topic routing key support (`*` and `#`).
